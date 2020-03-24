@@ -36,8 +36,8 @@ def genre=(genre)
  def self.new_from_filename(filename)
     file_array = filename.split(" - ")
 
-    song_name = array[1]
-    artist_name = array[0]
+    song_name = file_array[1]
+    artist_name = file_array[0]
     genre_name = array[2].split(".mp3").join
 
     artist = Artist.find_or_create_by_name(artist_name)
