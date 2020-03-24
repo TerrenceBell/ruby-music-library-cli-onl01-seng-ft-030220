@@ -4,4 +4,6 @@ class MusicImporter
   def initialize(path)
     @path = path 
   end 
+  def files
+    Dir.entries(@path).select! {||}
 end
